@@ -1,0 +1,20 @@
+
+#txtTitulo{
+    color: black;
+    font-size: 9pc;
+    margin-left: 600px;
+    margin-top: 30px;
+}
+#txtLogin{
+    color: rgb(0, 0, 0);
+    font-size: 2pc;
+    margin-left: 800px;
+   
+}
+
+#mensajeError{
+    color: red;
+}
+#btnCrearCuenta{
+    margin-left: 800px;
+}
