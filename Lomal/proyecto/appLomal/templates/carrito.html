@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{% static 'css/carrito.css' %}">
+
+  
+</head>
+<body>
+    <div id="contenedorTitulo">
+        <h2 id="nombreUsuario" data-nombreUsuario="{{ usuario }}">Carrito de Compras {{ usuario }}</h2>
+        <img src="{% static 'images/carrito/carrito.png' %}" alt="No encontrado">
+    </div>
+
+    <table id="tablaCarrito">
+        <thead>
+            <tr>
+                <th>Imagen</th>
+                <th>Producto</th>
+                <th>Codigo</th>
+                <th>Seccion</th>
+                <th>Talla</th>
+                <th>Precio Unitario</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="carrito-body">
+
+            {% for producto in productos%}
+                <tr>    
+                    <td><img src="{% static producto.imagenProducto %}" alt="No encontrado"></td>                
+                    <td>{{producto.nombreProducto}}</td>
+                    <td>{{producto.codigoProducto}}</td>
+                    <td>{{producto.seccionProducto}}</td>
+                    <td>{{producto.tallaProducto}}</td>
+                    <td>{{producto.precioProducto}}</td>
+
+                    
+                    <td><span class="eliminar" onclick="eliminarProducto('{{producto.codigoProducto}}', '{{producto.seccionProducto}}')">Eliminar</span></td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div id="contenedorPago">
+        <p class="total">Total: $<span id="total">{{precioTotal}}</span>    <button> Pagar </button></p>
+     
+    </div>    
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/carrito.js' %}"></script>
+
+
+</body>
+</html>

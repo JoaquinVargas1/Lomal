@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/tienda.css' %}">
+</head>
+<body>
+    <header>
+        <h1>L  Ó  M  A  L</h1>
+    </header>
+
+    <nav id="menu1">
+        <ul>
+            <li><a href="#" data-section="inicio">Inicio</a></li>
+            <li><a href="#" data-section="hombre">Hombres</a></li>
+            <li><a href="#" data-section="mujer">Mujeres</a></li>
+            <li><a href="#" data-section="nino">Niños</a></li>
+        </ul>
+    </nav>
+    
+    <nav id="menu2">
+        <ul>
+            <li><a href="#" data-category="sudadera">Sudaderas</a></li>
+            <li><a href="#" data-category="camisa">Camisas</a></li>
+            <li><a href="#" data-category="tenis">Tenis</a></li>
+            <li><a href="#" data-category="pantalon">Pantalones</a></li>
+        </ul>
+    </nav>
+    <div class="contenedor">
+        <img src="{% static 'images/carrito/carrito.png' %}" alt="No encontrado">
+        <button id="btnIrCarrito">Ir al carrito</button>
+        <img src="{% static 'images/iconos/iconoPerfil.png' %}" alt="No encontrado">
+        <span id="usuario" onclick="irPerfil()">{{usuario}}</span>
+    </div>
+    
+    
+
+ 
+    <section id="productos">
+        {% for data in productos %}
+            <div id="container"class="producto">
+        
+                <img id="imagen" src="{{ data.imagenProducto.url }}" alt="No encontrado">
+                <p id="nombre"> {{data.nombreProducto}}</p>
+                <p id="precio">Precio: {{data.precioProducto}}</p>
+                <button>Agregar al carrito</button>
+            </div>
+        {% endfor %}
+
+    </section>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+
+
+</body>
+</html>

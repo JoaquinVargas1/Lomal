@@ -1,0 +1,67 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#contenedorTitulo h2{
+    font-size: 50px;
+}
+#contenedorTitulo {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+table {
+
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.producto-imagen {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.eliminar {
+    color: red;
+    cursor: pointer;
+}
+
+#contenedorPago{
+    margin-top: 170px;
+    margin-bottom: 170px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+}
+#contenedorPago p{
+    font-size: 40px;
+}
+
+#contenedorPago button{
+    font-size: 35px;
+    width: 170px;
+    height: 50px;
+}
