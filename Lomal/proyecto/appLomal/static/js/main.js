@@ -144,7 +144,8 @@ function actualizarDoom(data) {
             method: 'POST',
 
             success: function(data) {
-                console.log(" todo bien")
+                console.log(" producto agregado")
+                alert('Poducto agregado')
 
             },
             error: function(error) {
