@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    {% load static%}
+    {% load static %}
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/perfil.css' %}">
+
 </head>
 <body>
-    <h1>estas en perfil {{usuario}}</h1>
+    <h1 id="titulo" nombre-usuario="{{usuario}}">Bienvenido a tu Perfil  {{usuario}}</h1>
+
+    <p id="txtTusDatos">Tus datos</p>
+   
+    
+    <div class="form-container">
+  
+        <label for="txtNombre" class="form-label">Nombre</label>
+        <input name="txtNombre" type="text" class="form-control" id="txtNombre" value="{{ datosUsuario.nombres }}">
+
+        <label for="txtApellido" class="form-label">Apellido</label>
+        <input name="txtApellido" type="text" class="form-control" id="txtApellido" value="{{ datosUsuario.apellidos }}">
+
+        <label for="txtEmail" class="form-label">Email</label>
+        <input name="txtEmail" type="text" class="form-control" id="txtEmail" value="{{ datosUsuario.email }}">
+
+        <label for="txtContrasena" class="form-label">Contraseña</label>
+        <input name="txtContrasena" type="password" class="form-control" id="txtContrasena" value="{{ datosUsuario.contrasena }}">
+
+        <button id="btnGuardar" type="submit">Guardar Cambios</button>
+        <button id="btnEliminar" type="submit">Eliminar Cuenta</button>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="{% static 'js/perfil.js' %}"></script>
+
+    
 </body>
 </html>
