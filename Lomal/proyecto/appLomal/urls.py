@@ -1,6 +1,6 @@
 from django.urls import path
 from django.conf import settings
-from .views import irLogin, Login, irCarrito, irRegistro, Registrar, obtenerInformacionProductos,agregarProductoCarrito,borrarProductoCarrito,actualizarCarrito,irPerfil
+from .views import irLogin, Login, irCarrito, irRegistro, Registrar, obtenerInformacionProductos,agregarProductoCarrito,borrarProductoCarrito,actualizarCarrito,irPerfil,actualizarDatos,eliminarCuenta
 from django.conf.urls.static import static
 
 urlpatterns = [
