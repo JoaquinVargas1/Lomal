@@ -194,5 +194,36 @@ def actualizarCarrito(request, usuario):
 
 
 
-def irPerfil(request,usuario):
-    return render(request,'perfil.html',{'usuario': usuario})  
+def irPerfil(request, usuario):
+    datos = get_object_or_404(Usuarios, usuario=usuario)
+    return render(request, 'perfil.html', {'usuario': usuario, 'datosUsuario': datos})
+
+
+def actualizarDatos(request,usuario,nombre,apellido,email,contrasena):
+    user = get_object_or_404(Usuarios, usuario=usuario)
+    
+    print(usuario)
+    try:
+        
+        user.nombres = nombre
+        user.apellidos = apellido
+        user.email = email
+        user.contrasena = contrasena
+        user.save()
+        return JsonResponse({ 'datos actualizados'})
+    except  Exception as e:
+        return JsonResponse({'error': 'Error al actualizar los datos'})
+
+    
+
+
+def eliminarCuenta(request,usuario):
+    datos = get_object_or_404(Usuarios, usuario=usuario)
+    
+    try:
+        
+        datos.delete()
+        return HttpResponse({'usuario borrado'})
+    except  Exception as e:
+        return HttpResponse({'error': 'Error al eliminar el usuario'})
+
