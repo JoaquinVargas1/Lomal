@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+#titulo{
+    margin-left: 200px;
+    font-size: 50px;
+}
+#txtTusDatos{
+    margin-top: 100px;
+    font-size: 35px;
+    text-align: center;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+.form-container {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+#btnGuardar {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#btnGuardar:hover {
+    background-color: #45a049;
+}
+
+#btnEliminar {
+    padding: 10px;
+    background-color: rgb(162, 21, 21);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 60px;
+}
+
+#btnEliminar:hover {
+    background-color: rgb(142, 8, 8);
+}
+
+#titulo{
+    text-align: center;
+
+}
