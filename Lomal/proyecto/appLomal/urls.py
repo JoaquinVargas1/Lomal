@@ -9,6 +9,7 @@ urlpatterns = [
     #views.home accedes a la funcion home del archivo views, y te retorna el archivo html
    # path('',views.home), lo dentro de '' es la ruta por defecto que entra al correr la app
     path('', irLogin),
+    path('irLogin/', irLogin),
     path('comprobarLogin/', Login),
     path('irRegistro/', irRegistro),
     path('registrar/', Registrar),
@@ -19,6 +20,9 @@ urlpatterns = [
     path('borrarProductoCarrito/<str:usuario>/<str:codigoProducto>/<str:seccionProducto>/', borrarProductoCarrito),
     path('actualizarCarrito/<str:usuario>/', actualizarCarrito),
     path('irPerfil/<str:usuario>/', irPerfil),
+    path('actualizarDatos/<str:usuario>/<str:nombre>/<str:apellido>/<str:email>/<str:contrasena>/', actualizarDatos),
+    path('eliminarCuenta/<str:usuario>/', eliminarCuenta),
+
 
 ]
 
